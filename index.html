@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>KidsBoutique - Contabilidad</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>KidsBoutique - Agregar Cuenta</h1>
+  <form id="formCuenta">
+    <input type="text" id="nombreCuenta" placeholder="Nombre de la cuenta" required />
+    <select id="tipoCuenta" required>
+      <option value="">Seleccione tipo</option>
+      <option value="Activo">Activo</option>
+      <option value="Pasivo">Pasivo</option>
+      <option value="Capital">Capital</option>
+    </select>
+    <input type="number" id="montoCuenta" placeholder="Monto" required />
+    <button type="submit">Agregar Cuenta</button>
+  </form>
+  <button onclick="verEstadoFinanciero()">Ver Estado Financiero</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
