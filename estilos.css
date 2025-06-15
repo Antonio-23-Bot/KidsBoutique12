@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+}
+
+form input, form select, form button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 250px;
+}
+
+.estado {
+  margin-top: 30px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
