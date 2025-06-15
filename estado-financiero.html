@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Estado Financiero - KidsBoutique</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>Estado Financiero - KidsBoutique</h1>
+  <div class="estado" id="activos">
+    <h2>Activos</h2>
+    <ul></ul>
+  </div>
+  <div class="estado" id="pasivos">
+    <h2>Pasivos</h2>
+    <ul></ul>
+  </div>
+  <div class="estado" id="capital">
+    <h2>Capital</h2>
+    <ul></ul>
+  </div>
+
+  <script>
+    const cuentas = JSON.parse(localStorage.getItem("cuentas")) || [];
+
+    const activos = document.querySelector("#activos ul");
+    const pasivos = document.querySelector("#pasivos ul");
+    const capital = document.querySelector("#capital ul");
+
+    cuentas.forEach(cuenta => {
+      const li = document.createElement("li");
+      li.textContent = `${cuenta.nombre} - C$ ${cuenta.monto}`;
+      if (cuenta.tipo === "Activo") activos.appendChild(li);
+      if (cuenta.tipo === "Pasivo") pasivos.appendChild(li);
+      if (cuenta.tipo === "Capital") capital.appendChild(li);
+    });
+  </script>
+</body>
+</html>
